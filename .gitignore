@@ -15,3 +15,9 @@ node_modules
 
 #!.yarn/cache
 .pnp.*
+
+#Arquivos Compilados
+dist
+
+#Variaveis de Ambiente
+.env

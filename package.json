@@ -1,4 +1,30 @@
 {
   "name": "primeiro-projeto-node",
-  "packageManager": "yarn@4.14.1"
+  "packageManager": "yarn@4.14.1",
+  "scripts": {
+    "build": "tsc",
+    "dev:server": "tsx watch src/server.ts",
+    "dev:debug": "node --inspect-brk=9229 --import tsx src/server.ts",
+    "lint": "eslint src",
+    "lint:fix": "eslint src --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "dependencies": {
+    "date-fns": "^4.4.0",
+    "express": "^5.2.1",
+    "uuidv4": "^6.2.13"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/express": "^5.0.6",
+    "eslint": "^10.8.0",
+    "eslint-config-prettier": "10.1.8",
+    "globals": "^17.9.0",
+    "prettier": "3.9.6",
+    "ts-node-dev": "^2.0.0",
+    "tsx": "^4.23.9",
+    "typescript": "6",
+    "typescript-eslint": "^8.66.0"
+  }
 }
