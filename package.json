@@ -4,6 +4,7 @@
   "scripts": {
     "build": "tsc",
     "dev:server": "tsx watch src/server.ts",
+    "typeorm": "typeorm-ts-node-commonjs",
     "dev:debug": "node --inspect-brk=9229 --import tsx src/server.ts",
     "lint": "eslint src",
     "lint:fix": "eslint src --fix",
@@ -11,13 +12,19 @@
     "format:check": "prettier --check ."
   },
   "dependencies": {
+    "bcryptjs": "^3.0.3",
     "date-fns": "^4.4.0",
     "express": "^5.2.1",
+    "pg": "^8.23.0",
+    "reflect-metadata": "^0.2.2",
+    "typeorm": "^1.1.0",
     "uuidv4": "^6.2.13"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
+    "@types/bcryptjs": "^3.0.0",
     "@types/express": "^5.0.6",
+    "@types/pg": "^8",
     "eslint": "^10.8.0",
     "eslint-config-prettier": "10.1.8",
     "globals": "^17.9.0",
