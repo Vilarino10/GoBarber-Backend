@@ -1,5 +1,5 @@
-import Appointment from '../Appointment';
-import AppDataSource from '../../database/data-source';
+import Appointment from '../infra/typeorm/entities/Appointment';
+import AppDataSource from '@shared/infra/typeorm/data-source';
 
 const AppointmentsRepository = AppDataSource.getRepository(Appointment).extend({
   async findByDate(date: Date): Promise<Appointment | null> {

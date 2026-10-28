@@ -1,8 +1,8 @@
 import 'reflect-metadata';
 import { DataSource } from 'typeorm';
 
-import Appointment from '../models/Appointment';
-import User from '../models/User';
+import Appointment from '@modules/appointments/infra/typeorm/entities/Appointment';
+import User from '@modules/users/infra/typeorm/entities/User';
 
 const AppDataSource = new DataSource({
   type: 'postgres',

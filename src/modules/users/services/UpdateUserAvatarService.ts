@@ -1,10 +1,10 @@
-import User from '../models/User';
+import User from '../infra/typeorm/entities/User';
 import path from 'path';
 import fs from 'fs';
 
-import uploadConfig from '../config/upload';
-import AppDataSource from '../database/data-source';
-import AppError from '../errors/AppError';
+import uploadConfig from '@config/upload';
+import AppDataSource from '@shared/infra/typeorm/data-source';
+import AppError from '@shared/errors/AppError';
 
 interface Request {
   user_id: string;

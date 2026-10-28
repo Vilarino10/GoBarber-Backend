@@ -4,6 +4,13 @@
     // File Layout
     "rootDir": "./src",
     "outDir": "./dist",
+    "baseUrl": "./src",
+    "paths": {
+      "@modules/*": ["modules/*"],
+      "@config/*": ["config/*"],
+      "@shared/*": ["shared/*"]
+    },
+    "ignoreDeprecations": "6.0",
 
     // Environment Settings
     // See also https://aka.ms/tsconfig/module
