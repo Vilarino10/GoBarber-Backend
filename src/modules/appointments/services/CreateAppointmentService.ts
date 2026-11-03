@@ -1,7 +1,7 @@
 import { startOfHour } from 'date-fns';
 
 import Appointment from '../infra/typeorm/entities/Appointment';
-import AppointmentsRepository from '@modules/appointments/repositories/AppointmentsRepository';
+import AppointmentsRepository from '@modules/appointments/infra/typeorm/repositories/AppointmentsRepository';
 import AppError from '@shared/errors/AppError';
 
 interface RequestDTO {
@@ -29,8 +29,6 @@ class CreateAppointmentService {
       provider_id,
       date: appointmentDate,
     });
-
-    await appointmentsRepository.save(appointment);
 
     return appointment;
   }
