@@ -16,7 +16,7 @@ const AppDataSource = new DataSource({
   logging: false,
 
   entities: [Appointment, User],
-  migrations: ['./src/database/migrations/*.ts'],
+  migrations: ['./src/shared/infra/typeorm/database/migrations/*.ts'],
 });
 
 export default AppDataSource;
