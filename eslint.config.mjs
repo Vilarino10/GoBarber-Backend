@@ -19,10 +19,22 @@ export default defineConfig([
     },
 
     rules: {
-      "@typescript-eslint/no-unused-vars": ["error", {
-        "argsIgnorePattern": "_"
-      }],
-    }
+      '@typescript-eslint/no-unused-vars': [
+        'error',
+        {
+          argsIgnorePattern: '_',
+        },
+      ],
+    },
+  },
+
+  {
+    files: ['**/*.spec.ts'],
+    languageOptions: {
+      globals: {
+        ...globals.jest,
+      },
+    },
   },
 
   eslintConfigPrettier,
